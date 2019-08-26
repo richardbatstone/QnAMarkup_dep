@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apache-hello-world
+spec:
+  selector:
+    matchLabels:
+      app: apache-hello-world
+      tier: frontend
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: apache-hello-world
+        tier: frontend
+    spec:
+      containers:
+      - name: apache-hello-world
+        image: "gcr.io/qmul-lab/apache-hello-world:latest"
+        env:
+        - name: ADMIN_TOKEN
+          value: "Example_env"
+        - name: API_BASE
+          value: "Example_env_2"
