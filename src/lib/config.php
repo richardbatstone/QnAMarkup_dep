@@ -1,7 +1,7 @@
 <?php 
 
 # The URL associated with your QnA instance's main page.
-$home = "/var/www/html/";
+$home = "/";
 
 # Source Whitelist. See http://www.qnamarkup.org/syntax/#remote
 # Provide a comma separated list of domains, and make sure to include the trailing slash (/).
