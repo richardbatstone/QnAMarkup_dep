@@ -423,7 +423,7 @@ function enumerate_tree($editor) {
 		# For A tags
 		} else if (preg_match("/A(\((.*)\))?((\[[^\]]*\])+:|:(\[[^\]]*\])?)/", $value)) {
 			# Build Q ID, assign to label
-			$numberline[$nested]++;
+			$numberline[$nested] = $numberline[$nested] + 1;
 			$label = $Qnode;
 			$j=0;
 			while($j < $nested and $numberline[$j]){
@@ -480,7 +480,7 @@ function enumerate_tree($editor) {
 		# For X tags
 		} else if (preg_match("/X:/", $value)) {
 			# Build Q ID, assign to label
-			$numberline[$nested]++;
+			$numberline[$nested] = $numberline[$nested] + 1;
 			$label = $Qnode;
 			$j=0;
 			while($j < $nested and $numberline[$j]){
